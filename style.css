@@ -61,16 +61,24 @@ h1 {
     margin-bottom: 1rem;
 }
 
-h2, li::marker {
+h2, h3 {
+    margin: 1rem 0;
+}
+
+h3, li::marker {
     color: var(--brown-800);
 }
 
-h3, article li::marker {
+h2, article li::marker {
     color: var(--rose-800);
 }
 
-h1, h2 {
+h1, h3 {
     font-family: "Young Serif";
+}
+
+ul, ol {
+    margin: 0 1.5rem;
 }
 
 li {
