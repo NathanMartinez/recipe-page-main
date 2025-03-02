@@ -1,0 +1,143 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Outfit";
+    font-size: 16px;
+    max-width: 100dvw;
+    color: var(--stone-600);
+    background-color: var(--stone-100);
+}
+
+main {
+    background-color: var(--white);
+    max-width: 40rem;
+}
+
+figure, img {
+    max-width: 100%;
+}
+
+section {
+    margin: 0 2rem;
+    padding: 1rem 0;
+}
+
+.sep {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+article {
+    padding: 1rem;
+    background-color: var(--rose-50);
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--stone-900);
+    margin-bottom: 1rem;
+}
+
+h2, li::marker {
+    color: var(--brown-800);
+}
+
+h3, article li::marker {
+    color: var(--rose-800);
+}
+
+h1, h2 {
+    font-family: "Young Serif";
+}
+
+li {
+  list-style: none; 
+}
+
+.custom-list li {
+  display: inline-block;
+  width: 100%;
+  padding-left: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.custom-dot li::before {
+  content: "\2022";
+  font-size: 1.5rem;
+  color: var(--brown-800);
+  position: absolute;
+  left: -0.5rem;
+}
+
+.prep-list li::before {
+    color: var(--rose-800)
+}
+
+ol li {
+    counter-increment: count;
+}
+
+ol li::before {
+  content: counter(count)'.';
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--brown-800);
+  position: absolute;
+  left: -0.7rem;
+}
+
+.nutrition {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nutrition li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+.nutrition li b {
+    color: var(--brown-800);
+}
+
+
+@media (min-width: 500px) {
+    main, figure {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    
+    main {
+        margin: 6rem;
+    }
+    
+    figure {
+        margin: 2rem;
+    }
+}

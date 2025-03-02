@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "dev": "vite --port 8000"
+    },
+  "dependencies": {},
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}
